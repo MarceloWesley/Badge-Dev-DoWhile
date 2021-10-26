@@ -1,0 +1,399 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+  font-family: 'Zen Old Mincho', sans-serif;
+  /*esse webkit deixa a font um pouco mais suave (mais bonitinha) */
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  place-items: center;
+  
+}
+
+
+
+body{
+  background: rgb(0, 0, 0) radial-gradient(38% 50% at 50% -10%, #c50bc5 0%, rgb(0, 0, 0) 100%) no-repeat;
+
+}
+
+
+
+
+#content{
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 22.5rem;
+  height: 34.5rem;
+  border-radius: 2px;
+ 
+}
+
+.container{
+  max-width: 250px;
+  margin-left:  auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--gray);
+  position: relative;
+}
+
+
+
+.avatar{
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span{
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+  top: -104px;
+}
+
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  /*https://www.bennettfeely.com/clippy/*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  top: -87px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.text{
+  position: relative;
+  top: -114px;
+}
+
+#UserBio{
+  position: relative;
+  top: -109px;
+}
+
+#SocialLinks{
+  position: relative;
+  top: -127px;
+}
+
+h1 {
+  font-family: 'Vidaloka', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  margin-top: 0.25rem;
+  color: var(--gray);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  margin-top: 2rem;
+}
+
+ul{
+  margin-top: 4rem;
+  display: flex;
+  padding: 0;
+  gap: 0.5rem;
+  justify-content: center;
+
+}
+
+.container::before{
+content: '';
+z-index: 2;
+height: 13rem;
+width: 4rem;
+background: black;
+position: absolute;
+top: -22.93rem;
+left: 5.93rem;
+background: linear-gradient(125deg, #921EFB, #BB22F4);
+}
+
+.avatar::before{
+  content: '';
+  height: 0.375rem;
+  background: black;
+  width: 4.75rem;
+  position: absolute;
+  z-index: 1;
+  top: -10.125rem;
+  left: 2.75rem;
+}
+
+.degrade{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -1rem;
+  left: 50rem;
+  z-index: 3;
+}
+
+.avatar img{
+  animation: animate 3s linear infinite;
+  border-radius: 50px;
+  
+}
+
+@keyframes animate
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(253, 7, 253, 0.7), 0 0 0 0 rgba(24, 153, 104, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 20px rgba(55, 209, 201, 0), 0 0 0 0 rgba(150, 10, 206, 0.7);
+    }
+    80%
+    {
+        box-shadow: 0 0 0 20px rgba(55, 209, 201, 0), 0 0 0 20px rgba(55, 209, 201, 0);
+    }
+    100%
+    {
+        box-shadow: 0 0 0 0 rgba(55, 209, 201, 0), 0 0 0 20px rgba(55, 209, 201, 0);
+    }
+}
+
+ul img{
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+  
+}
+
+ul img:hover{
+  transform: translateY(-10px);
+}
+
+.youtube img:hover{
+  animation: youtube 3s ;
+}
+
+@keyframes youtube
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(223, 16, 16, 0.7), 0 0 0 0 rgba(153, 24, 24, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 10px rgba(55, 209, 201, 0), 0 0 0 0 rgba(55, 209, 201, 0.7);
+    }
+
+  }
+
+  .instagram img:hover{
+    animation: instagram 3s ;
+  }
+
+  @keyframes instagram{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(238, 7, 188, 0.7), 0 0 0 0 rgba(201, 134, 10, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 10px rgba(55, 209, 201, 0), 0 0 0 0 rgba(55, 209, 201, 0.7);
+    }
+
+  }
+
+  .facebook img:hover{
+    animation: facebook 3s ;
+  }
+
+  @keyframes facebook{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(7, 30, 238, 0.7), 0 0 0 0 rgba(201, 134, 10, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 10px rgba(55, 209, 201, 0), 0 0 0 0 rgba(55, 209, 201, 0.7);
+    }
+
+  }
+
+  .twitter img:hover{
+    animation: twitter 3s ;
+  }
+
+  @keyframes twitter{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(7, 134, 238, 0.7), 0 0 0 0 rgba(201, 134, 10, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 10px rgba(55, 209, 201, 0), 0 0 0 0 rgba(55, 209, 201, 0.7);
+    }
+
+  }
+
+
+  #UserPhoto:hover{
+    transform: translateY(-2px);
+  }
+
+
+  @media (max-width: 500px){
+
+    html, body {
+      height: 100%;
+      --black: hsl(240, 6%, 13%);
+      --gray: hsl(240, 9%, 89%);
+      font-family: 'Zen Old Mincho', sans-serif;
+      /*esse webkit deixa a font um pouco mais suave (mais bonitinha) */
+      -webkit-font-smoothing: antialiased;
+      
+    }
+    main{
+      background: url(images/background.svg) no-repeat center/cover;
+      min-height: 812px;
+      width: 100vw !important;
+      height: 100vh !important;
+    }
+
+    .container{
+      max-width: 250px;
+      margin-left:  auto;
+      margin-right: auto;
+      text-align: center;
+      color: var(--gray);
+      position: relative;
+    }
+    
+    
+    
+    .avatar{
+      width: 10rem;
+      margin: 11.5rem auto 0;
+      position: relative;
+    }
+    
+    .avatar span{
+      position: absolute;
+      top: -10px;
+      z-index: 1;
+  
+     
+    }
+    
+    .avatar > img{
+      width: 10rem;
+      height: 11.5rem;
+      object-fit: cover;
+      /*https://www.bennettfeely.com/clippy/*/
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      top: 5px;
+      position: relative;
+      transition: 0.5s ease-in-out;
+    }
+    
+    .text{
+      position: relative;
+      top: -16px;
+      font-size: 1.4rem;
+    }
+    
+    #UserBio{
+      position: relative;
+      top: -2px;
+      font-size: 1.2rem;
+    }
+    
+    #SocialLinks{
+      position: relative;
+      top: -9px;
+    }
+    
+    h1 {
+      font-family: 'Vidaloka', sans-serif;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    a {
+      text-decoration: none;
+      margin-top: 0.25rem;
+      color: var(--gray);
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    p{
+      margin-top: 2rem;
+    }
+    
+    ul{
+      margin-top: 4rem;
+      display: flex;
+      padding: 0;
+      gap: 0.5rem;
+      justify-content: center;
+    
+    }
+    
+    .container::before{
+    content: '';
+    z-index: 2;
+    height: 13rem;
+    width: 4rem;
+    background: black;
+    position: absolute;
+    top: -22.93rem;
+    left: 5.93rem;
+    background: linear-gradient(125deg, #921EFB, #BB22F4);
+    }
+    
+    .avatar::before{
+      content: '';
+      height: 0.375rem;
+      background: black;
+      width: 4.75rem;
+      position: absolute;
+      z-index: 1;
+      top: -10.125rem;
+      left: 2.75rem;
+    }
+    
+    .degrade{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -1rem;
+      left: 50rem;
+      z-index: 3;
+    }
+    
+    .avatar img{
+      animation: animate 3s linear infinite;
+      border-radius: 50px;
+      
+    }
+ 
+
+  }
+
+
+
+
+
