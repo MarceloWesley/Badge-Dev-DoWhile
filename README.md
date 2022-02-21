@@ -1,17 +1,17 @@
 # Badge-Dev-DoWhile
 
-# Sobre
-Fiz esse projeto no NLW Heat da RocketSeat, consiste em um Crachá de programador contendo as minhas redes sociais. Crachá feito para o evento DoWhile.
+# About
+I did this project on RocketSeat's NLW Heat, it consists of a programmer's badge containing my social networks. Badge made for the DoWhile event.
 
-## Tecnologias Usadas
+## Technologies
 - JavaScript
 - CSS
 - HTML
 
-## Api Usada
+## API
 [Rest Api GitHub](https://docs.github.com/en/rest)
 
-## Link da Página do Projeto
+## Project Link
 - [Projeto](https://marcelowesley.github.io/Badge-Dev-DoWhile/)
 
 
